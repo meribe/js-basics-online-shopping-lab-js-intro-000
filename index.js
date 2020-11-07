@@ -19,19 +19,19 @@ function addToCart(item) {
 
 function viewCart() {
 
-    if (cart.length ===0) {
-     console.log("Your shopping cart is empty.")
-   }
-    else {
+  if (cart.length >0){
+   for (var i=0; 0< cart.length; i++){
         var yeni= [];
-          for (var i=0; 0< cart.length; i++){
-            for (var item in cart[i]){
-            yeni.push(`${item} at  \$${price}`)
-}
+          yeni.push(`${item} at  \$${price}`)
+
 }
          return `In your cart, you have ${yeni.join(",")} .`
 }
+  else {
+ console.log("Your shopping cart is empty.")
 }
+}
+
 
 function total() {
   let totalcost= 0// write your code here
@@ -53,7 +53,9 @@ function removeFromCart(item) {
        return cart
     }
 }
-}
+
+ console.log("That item is not in your cart.")}
+
 
 
 function placeOrder(cardNumber) {
