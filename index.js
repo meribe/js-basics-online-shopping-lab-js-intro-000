@@ -11,7 +11,7 @@ function setCart(c) {
 
 function addToCart(item) {
  var price = Math.floor(Math.random() * 99)
- cart.push(new Object({[itemName] : "`${item}`" , [itemprice] : `${parseInt(price)}` }))
+ cart.push(new Object({ `itemName : "${item}" , itemprice : ${parseInt(price)}` }))
  return  `${item} has been added to your cart.`
 }
 
